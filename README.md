@@ -21,7 +21,7 @@ apt install python3-venv
 
 Create and activate virtual environment using virtualenv.
 ```bash
-~/your/path/here$ python -m venv python3-virtualenv
+~/your/path/here$ python3 -m venv python3-virtualenv
 
 # creates a directory python3-virtual env in the current directory,
 # which contains all the files for a new virtual environment.
