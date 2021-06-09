@@ -49,11 +49,22 @@ body {
     padding-right: 0px;
 }
 
+.landing {
+    background-image: url("/static/img/desktop.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+
+}
 .profile {
-    background-color: #1d539f !important;
+    justify-content: center;
     text-align: center;
-    height: 320px;
     margin-bottom: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    vertical-align: center;
 }
 
 .profile h1 {
@@ -68,7 +79,7 @@ body {
         max-height: 100%;
         margin-left: auto;
         margin-right: auto;
-        display: block;        
+        display: block;
         padding: 20px;
 }
 
@@ -77,6 +88,11 @@ body {
     height: 200px;
 }
 
+.profile p {
+            font-size: 50px;
+        font-weight: 700;
+        color: white;
+}
 .banner {
     padding: 20px 0px 50px 0px;
     height: 150px;
@@ -94,4 +110,8 @@ body {
     color: white;
     font-size: 50px;
     font-weight: 700;
+}
+
+section {
+    justify-content: center;
 }
