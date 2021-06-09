@@ -6,9 +6,9 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 
-lavina = open("./lavina.json")
-data = json.load(lavina)
-lavina.close()
+f = open("./lavina.json")
+data = json.load(f)
+f.close()
 
 @app.route('/')
 def index():
