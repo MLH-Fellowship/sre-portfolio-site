@@ -1,3 +1,14 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
 p, h1, h2, h3, h4, h5, h6, button {
     font-family: "Roboto", serif;
 }
@@ -54,7 +65,6 @@ body {
     background-size: cover;
     height: 100vh;
     background-repeat: no-repeat;
-
 }
 .profile {
     justify-content: center;
@@ -89,7 +99,7 @@ body {
 }
 
 .profile p {
-            font-size: 50px;
+        font-size: 50px;
         font-weight: 700;
         color: white;
 }
