@@ -14,8 +14,8 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 
-    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
-    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
+    <link lang='sass' rel="stylesheet" href="/static/styles/main.css">
+    <link rel='icon' href='/static/img/favicon.ico' type='image/x-icon' />
     <title>{{ title }}</title>
 </head>
 
@@ -24,7 +24,7 @@
         <div class="nav-content">
             <a href="/">
                 <div class="nav-logo">
-                    <img src="./static/img/logo.svg" />
+                    <img src="/static/img/logo.svg" />
                 </div>
             </a>
         </div>
@@ -32,9 +32,15 @@
 
     <div class="profile">
         <div id="profile-picture" class="profile-picture">
-            <img src="./static/img/logo.jpg">
+            <img src="/static/img/logo.jpg">
         </div>
         <h1>{{ title }}</h1>
+	<p>{{ bodytext }}</p>
+	<p><a href="/">home</a></p>
+	<p><a href="/experience">experience</a></p>
+	<p><a href="/projects">projects</a></p>
+	<p><a href="/accomplishments">accomplishments</a></p>
+	<p><a href="/skills">skills</a></p>
     </div>
 </body>
 </html>
