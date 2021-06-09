@@ -50,9 +50,11 @@ body {
 }
 
 .profile {
-    background-color: #1d539f !important;
+
+    background-image: url("/static/img/desktop.jpg");
+    background-size: cover;
     text-align: center;
-    height: 320px;
+    height: 100vh;
     margin-bottom: 50px;
 }
 
