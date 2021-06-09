@@ -5,34 +5,42 @@ from dotenv import load_dotenv
 load_dotenv()
 app = Flask(__name__)
 
+dummy_info = {
+    "work": [
+        {
+            "summary": "lorem ipsum",
+            "details": "longer lorem ipsum",
+        },
+        {
+            "summary": "lorem ipsum 2",
+            "details": "longer lorem ipsum 2",
+        }
+    ],
+}
 
 @app.route('/')
 def index():
     return render_template('index.html', title="MLH Fellow",
-                           bodytext="it me", url=os.getenv("URL"))
+                           content="it me", url=os.getenv("URL"))
 
 @app.route('/experience/')
-@app.route('/experience/<page>')
-def experience(page=None):
-    return render_template('index.html', title="Experience",
-                           bodytext="experience?", url=os.getenv("URL"))
+def experience():
+    return render_template('data.html', title="Experience",
+                           content=dummy_info["work"], url=os.getenv("URL"))
 
 @app.route('/projects/')
-@app.route('/projects/<page>')
-def projects(page=None):
+def projects():
     return render_template('index.html', title="Projects",
-                           bodytext="projects?", url=os.getenv("URL"))
+                           content="projects?", url=os.getenv("URL"))
 
 @app.route('/accomplishments/')
-@app.route('/accomplishments/<page>')
-def accomplishments(page=None):
+def accomplishments():
     return render_template('index.html', title="Accomplishments",
-                           bodytext="accomplishments?", url=os.getenv("URL"))
+                           content="accomplishments?", url=os.getenv("URL"))
 
 @app.route('/skills/')
-@app.route('/skills/<page>')
-def skills(page=None):
+def skills():
     return render_template('index.html', title="Skills",
-                           bodytext="skills?", url=os.getenv("URL"))
+                           content="skills?", url=os.getenv("URL"))
 
         

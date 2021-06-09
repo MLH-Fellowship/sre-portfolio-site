@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block head_title %}{{ title }}{% endblock %}
+{% block body_title %}{{ title }}{% endblock %}
+{% block content %}
+{% for datum in content %}
+<p><b>{{ datum.summary }}</b></p>
+<p>{{ datum.details }}</p>
+{% endfor %}
+{% endblock %}
