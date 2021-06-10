@@ -100,4 +100,8 @@ body {
 .landing {
     display: flex;
     flex-wrap: wrap;
+    justify-content:center;
+    background-color: #d4e6ff;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
