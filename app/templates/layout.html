@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta
+	    name="viewport"
+	    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+	    />
+	<meta property="og:title" content="Personal Portfolio" />
+	<meta property="og:description" content="My Personal Portfolio" />
+	<meta property="og:url" content="{{ url }}" />
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta property="og:title" content="Personal Portfolio">
-    <meta property="og:description" content="My Personal Portfolio">
-    <meta property="og:url" content="{{ url }}">
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+	    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+	    rel="stylesheet"
+	    />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-
-    <link lang='sass' rel="stylesheet" href="/static/styles/main.css">
-    <link rel='icon' href='/static/img/favicon.ico' type='image/x-icon' />
-    <title>{% block head_title %}{% endblock %}</title>
-</head>
-
-<body>
-    <header class="nav-bar">
-        <div class="nav-content">
-            <a href="/">
-                <div class="nav-logo">
-                    <img src="/static/img/logo.svg" />
-                </div>
-            </a>
-        </div>
+	<link lang="sass" rel="stylesheet" href="/static/styles/main.css" />
+	<link rel="icon" href="/static/img/favicon.ico" type="image/x-icon" />
+	<title>{% block header %}{% endblock %}</title>
+    </head>
+    <header>
+	<a href="#">Contact</a>
+	<a href="#">Resume</a>
     </header>
 
-    <div class="profile">
-        <div id="profile-picture" class="profile-picture">
-            <img src="/static/img/logo.jpg">
-        </div>
-        <h1>{% block body_title %}{% endblock %}</h1>
-	<p>{% block content %}{% endblock %}</p>
-	<p><a href="/">home</a> |
-	<a href="/experience">experience</a> |
-	<a href="/projects">projects</a> |
-	<a href="/accomplishments">accomplishments</a></p>
-    </div>
-</body>
+    <body>
+	<div class="profile">
+	    <div class="row">
+		<div class="column">
+		    <h2>Hi! I am</h2>
+		    <h1>{% block name %}{% endblock %}</h1>
+		    <h4>{% block title %}{% endblock %}</h4>
+		    <text> {% block about %}{% endblock %} </text>
+		</div>
+		<div class="column">
+		    <a href="/"><img src="/static/img/profile-pic.png" style="width: 275px; height: 225px" /></a>
+		</div>
+	    </div>
+	</div>
+	<div class="technical-side">
+	    {% block skills %}{% endblock %}
+	    {% block main %}{% endblock %}
+	</div>
+	<div>
+	    {% block education %}{% endblock %}
+	    {% block side1 %}{% endblock %}
+	    {% block side2 %}{% endblock %}
+	</div>
+    </body>
 </html>

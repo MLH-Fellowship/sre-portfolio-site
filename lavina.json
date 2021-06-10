@@ -6,44 +6,44 @@
         "school": "University of the People",
         "date": "2016-2020"
     },
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada, velit eget dictum gravida, quam neque ultricies massa, eget dignissim tortor libero vel tortor. Fusce vitae dui molestie, vulputate augue sit amet, faucibus mauris. Quisque at erat orci. Vestibulum porta mauris id metus scelerisque dapibus. Suspendisse in varius sem, in dictum diam. Ut auctor aliquam blandit. Fusce sed ullamcorper tortor, vitae ultricies augue. Duis rutrum, massa ut egestas pharetra, nulla sem volutpat nibh, id vulputate augue lacus ac ante.",
+    "about": "this is an about for Lavina.",
 
     "skills": ["HTML", "CSS", "JavaScript", "React.js", "Bootstrap"],
 
-    "experience": [
+    "Experience": [
         {
-            "name": "Front-End Web Development",
+            "name": "Front-End Web Development - Figma",
             "date": "2020-Present",
-            "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada, velit eget dictum gravida, quam neque ultricies massa, eget dignissim tortor libero vel tortor. Fusce vitae dui molestie, vulputate augue sit amet, faucibus mauris. Quisque at erat orci. Vestibulum porta mauris id metus scelerisque dapibus. Suspendisse in varius sem, in dictum diam. Ut auctor aliquam blandit. Fusce sed ullamcorper tortor, vitae ultricies augue. Duis rutrum, massa ut egestas pharetra, nulla sem volutpat nibh, id vulputate augue lacus ac ante."
+            "details": "frontend web details"
         },
         {
-            "name": "Back-End Web Development",
+            "name": "Back-End Web Development - Figma",
             "date": "2019-2020",
-            "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada, velit eget dictum gravida, quam neque ultricies massa, eget dignissim tortor libero vel tortor. Fusce vitae dui molestie, vulputate augue sit amet, faucibus mauris. Quisque at erat orci. Vestibulum porta mauris id metus scelerisque dapibus. Suspendisse in varius sem, in dictum diam. Ut auctor aliquam blandit. Fusce sed ullamcorper tortor, vitae ultricies augue. Duis rutrum, massa ut egestas pharetra, nulla sem volutpat nibh, id vulputate augue lacus ac ante."
+            "details": "backend web details"
         }
     ],
-    "projects": [
+    "Projects": [
         {
             "name": "Web Design",
             "date": "2020-Present",
-            "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada, velit eget dictum gravida, quam neque ultricies massa, eget dignissim tortor libero vel tortor. Fusce vitae dui molestie, vulputate augue sit amet, faucibus mauris. Quisque at erat orci. Vestibulum porta mauris id metus scelerisque dapibus. Suspendisse in varius sem, in dictum diam. Ut auctor aliquam blandit. Fusce sed ullamcorper tortor, vitae ultricies augue. Duis rutrum, massa ut egestas pharetra, nulla sem volutpat nibh, id vulputate augue lacus ac ante."
+            "details": "Project details for web design"
         },
         {
             "name": "Bright Ideas",
             "date": "2019-2020",
-            "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada, velit eget dictum gravida, quam neque ultricies massa, eget dignissim tortor libero vel tortor. Fusce vitae dui molestie, vulputate augue sit amet, faucibus mauris. Quisque at erat orci. Vestibulum porta mauris id metus scelerisque dapibus. Suspendisse in varius sem, in dictum diam. Ut auctor aliquam blandit. Fusce sed ullamcorper tortor, vitae ultricies augue. Duis rutrum, massa ut egestas pharetra, nulla sem volutpat nibh, id vulputate augue lacus ac ante."
+            "details": "project details for bright ideas"
         }
     ],
     "Accomplishments": [
         {
             "name": "Whatever it is",
             "date": "2018",
-            "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada, velit eget dictum gravida, quam neque ultricies massa, eget dignissim tortor libero vel tortor. Fusce vitae dui molestie, vulputate augue sit amet, faucibus mauris. Quisque at erat orci. Vestibulum porta mauris id metus scelerisque dapibus. Suspendisse in varius sem, in dictum diam. Ut auctor aliquam blandit. Fusce sed ullamcorper tortor, vitae ultricies augue. Duis rutrum, massa ut egestas pharetra, nulla sem volutpat nibh, id vulputate augue lacus ac ante."
+            "details": "accomplishment 1 details"
         },
         {
             "name": "Accomplishment 2",
             "date": "2019",
-            "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada, velit eget dictum gravida, quam neque ultricies massa, eget dignissim tortor libero vel tortor. Fusce vitae dui molestie, vulputate augue sit amet, faucibus mauris. Quisque at erat orci. Vestibulum porta mauris id metus scelerisque dapibus. Suspendisse in varius sem, in dictum diam. Ut auctor aliquam blandit. Fusce sed ullamcorper tortor, vitae ultricies augue. Duis rutrum, massa ut egestas pharetra, nulla sem volutpat nibh, id vulputate augue lacus ac ante."
+            "details": "accomplishment 2 details"
         }
     ]
 }
