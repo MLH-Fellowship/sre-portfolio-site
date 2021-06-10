@@ -114,9 +114,13 @@ body {
 .project-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1100px;
+    justify-content: space-around;
+    max-width: 1150px;
     margin: 0 auto;
+}
+
+.projects-section-title {
+    font-size: 3em;
 }
 
 .project-container {
@@ -129,13 +133,21 @@ body {
     margin: 2px 0;
 }
 
+.project-container > h4 {
+    font-size: 1.5em;
+}
+
+.project-container > h5 {
+    font-size: 1em;
+}
+
 .project-details {
     position: relative;
-    /* width: 100%; */
 }
 
 .project-details:hover .project-overlay {
     opacity: 1;
+    cursor: pointer;
   }
 
 .project-overlay {
@@ -160,5 +172,7 @@ body {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    width: 80%;
     text-align: center;
+    font-size: 1em;
 }
