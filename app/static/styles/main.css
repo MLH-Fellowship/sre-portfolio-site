@@ -115,13 +115,50 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .project-container {
     margin: 0 2rem 2rem;
 }
 
-.project-container > h4 {
+.project-container > h4, h5 {
+    width: 100%;
     text-align: left;
     margin: 2px 0;
+}
+
+.project-details {
+    position: relative;
+    /* width: 100%; */
+}
+
+.project-details:hover .project-overlay {
+    opacity: 1;
+  }
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 99%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.project-overlay-content {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
