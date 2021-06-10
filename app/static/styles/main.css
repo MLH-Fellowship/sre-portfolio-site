@@ -9,6 +9,8 @@
     background: transparent;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
+
 p, h1, h2, h3, h4, h5, h6, button {
     font-family: "Roboto", serif;
 }
@@ -61,7 +63,7 @@ body {
 }
 
 .landing {
-    background-image: url("/static/img/desktop.jpg");
+    background-color: #EDEBEB;
     background-size: cover;
     height: 100vh;
     background-repeat: no-repeat;
@@ -77,10 +79,20 @@ body {
     vertical-align: center;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
+
 .profile h1 {
-        font-size: 50px;
-        font-weight: 700;
-        color: white;
+    font-size: 40vh;
+    font-weight: 700;
+    line-height: 80%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: transparent;
+    text-align: left;
+    font-family: "Cabin Condensed", serif;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
 }
 
 .profile img {
@@ -124,4 +136,62 @@ body {
 
 section {
     justify-content: center;
+}
+
+$ani-speed: 2s;
+$ani-delay: 1s;
+
+body {
+    background: #222;
+}
+
+.arrow {
+    opacity: 0;
+    position: absolute;
+        left: 50%;
+        top: 50%;
+    transform-origin: 50% 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.arrow-first {
+    animation: arrow-movement $ani-speed ease-in-out infinite;
+}
+.arrow-second {
+    animation: arrow-movement $ani-speed $ani-delay ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 3px; 
+    position: absolute;
+        top: 0;
+        left: 0;
+    width: 30px;
+}
+
+.arrow:before {
+    transform: rotate(45deg) translateX(-23%);
+    transform-origin: top left;
+}
+
+.arrow:after {
+    transform: rotate(-45deg) translateX(23%);
+    transform-origin: top right;
+}
+
+@keyframes arrow-movement {
+    0% { 
+        opacity: 0;
+        top: 45%;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 0;
+    }
 }
