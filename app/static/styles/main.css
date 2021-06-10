@@ -99,4 +99,5 @@ body {
 /* start of new stuff */
 .landing {
     display: flex;
+    flex-wrap: wrap;
 }
