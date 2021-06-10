@@ -105,3 +105,23 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.content {
+    margin: 0 5rem;
+    text-align: center;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-container {
+    margin: 0 2rem 2rem;
+}
+
+.project-container > h4 {
+    text-align: left;
+    margin: 2px 0;
+}
