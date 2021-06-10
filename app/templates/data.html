@@ -26,12 +26,7 @@
 <h3>{{ main }}</h3>
 {% for datum in data[main] %}
 <div class="row">
-    <div class="column">
-	<img
-	    src="/static/img/project1.jpg"
-	    style="width: 150px; height: 100px"
-	    />
-    </div>
+    <div class="column"></div>
     <div class="column">
 	<h5>{{ datum["name"] }}</h5>
 	<h5>{{ datum["date"] }}</h5>
@@ -42,7 +37,7 @@
 {% endblock %}
 
 {% block side1 %}
-<h4>{{ side1 }}</h4>
+<h4><a href="/{{ side1 }}">{{ side1 }}</a></h4>
 {% for datum in data[side1] %}
 <text>
     {{ datum["name"] }}<br />
@@ -53,7 +48,7 @@
 {% endblock %}
 
 {% block side2 %}
-<h4>Accomplishments</h4>
+<h4><a href="/{{ side2 }}">{{ side2 }}</a></h4>
 {% for datum in data[side2] %}
 <text>
     {{ datum["name"] }}<br />

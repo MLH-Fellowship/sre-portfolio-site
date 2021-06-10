@@ -6,16 +6,9 @@
         "school": "University of the People",
         "date": "2016-2020"
     },
-    "about": "this is an about for lavina.",
+    "about": "this is an about for Lavina.",
 
-    "skills": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React.js",
-        "Bootstrap",
-        "advanced napkins"
-    ],
+    "skills": ["HTML", "CSS", "JavaScript", "React.js", "Bootstrap"],
 
     "Experience": [
         {

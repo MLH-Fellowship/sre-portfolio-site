@@ -11,7 +11,17 @@ data = json.load(f)
 f.close()
 
 @app.route('/')
+@app.route('/Experience/')
 def index():
+    return render_template('data.html',
+                           data=data,
+                           main="Experience",
+                           side1="Projects",
+                           side2="Accomplishments",
+                           url=os.getenv("URL"))
+
+@app.route('/Projects/')
+def projects():
     return render_template('data.html',
                            data=data,
                            main="Projects",
@@ -19,17 +29,11 @@ def index():
                            side2="Accomplishments",
                            url=os.getenv("URL"))
 
-# @app.route('/experience/')
-# def experience():
-#     return render_template('data.html', title="Experience",
-#                            content=data["experience"], url=os.getenv("URL"))
-
-# @app.route('/projects/')
-# def projects():
-#     return render_template('index.html', title="Projects",
-#                            content="projects?", url=os.getenv("URL"))
-
-# @app.route('/accomplishments/')
-# def accomplishments():
-#     return render_template('index.html', title="Accomplishments",
-#                            content="accomplishments?", url=os.getenv("URL"))
+@app.route('/Accomplishments/')
+def accomplishments():
+    return render_template('data.html',
+                           data=data,
+                           main="Accomplishments",
+                           side1="Experience",
+                           side2="Projects",
+                           url=os.getenv("URL"))
