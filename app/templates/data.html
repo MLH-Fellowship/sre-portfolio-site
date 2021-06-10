@@ -1,9 +1,63 @@
 {% extends "layout.html" %}
-{% block head_title %}{{ title }}{% endblock %}
-{% block body_title %}{{ title }}{% endblock %}
-{% block content %}
-{% for datum in content %}
-<p><b>{{ datum.summary }}</b></p>
-<p>{{ datum.details }}</p>
+{% block header %}{{ data["name"] }}{% endblock %}
+{% block name %}{{ data["name"] }}{% endblock %}
+{% block title %}{{ data["title"] }}{% endblock %}
+{% block about %}{{ data["about"] }}{% endblock %}
+
+{% block education %}
+<h4>Education</h4>
+<text>
+{{ data["education"]["degree"] }} <br />
+{{ data["education"]["school"] }} <br />
+{{ data["education"]["date"] }}
+</text>
+{% endblock %}
+
+{% block skills %}
+<h4>Skills</h4>
+<ul class="no-bullets">
+    {% for skill in data["skills"] %}
+    <li>{{ skill }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block main %}
+<h3>{{ main }}</h3>
+{% for datum in data[main] %}
+<div class="row">
+    <div class="column">
+	<img
+	    src="/static/img/project1.jpg"
+	    style="width: 150px; height: 100px"
+	    />
+    </div>
+    <div class="column">
+	<h5>{{ datum["name"] }}</h5>
+	<h5>{{ datum["date"] }}</h5>
+	<text>{{ datum["details"] }}</text>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+{% block side1 %}
+<h4>{{ side1 }}</h4>
+{% for datum in data[side1] %}
+<text>
+    {{ datum["name"] }}<br />
+    {{ datum["date"] }}<br />
+</text>
+
+{% endfor %}
+{% endblock %}
+
+{% block side2 %}
+<h4>Accomplishments</h4>
+{% for datum in data[side2] %}
+<text>
+    {{ datum["name"] }}<br />
+    {{ datum["date"] }}<br />
+</text>
 {% endfor %}
 {% endblock %}
