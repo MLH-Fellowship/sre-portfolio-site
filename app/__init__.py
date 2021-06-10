@@ -9,3 +9,5 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
+
+# Add Route for Blog -> Integrate Markdown and Firebase
