@@ -4,12 +4,14 @@ from flask import Flask, request, jsonify, redirect, render_template, send_from_
 from dotenv import load_dotenv
 from firebase_admin import credentials, firestore, initialize_app
 from datetime import datetime
+import json
 
 load_dotenv()
 app = Flask(__name__)
 
 #Initialize Firestore DB
-cred = credentials.Certificate('firebase-key.json')
+firebase_creds = json.loads(os.getenv("FIREBASE_CREDS"))
+cred = credentials.Certificate(firebase_creds)
 default_app = initialize_app(cred)
 db = firestore.client()
 posts_ref = db.collection('posts')

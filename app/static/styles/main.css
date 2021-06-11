@@ -15,6 +15,7 @@ body {
 
 .content {
     text-align: center;
+    margin-top: 5%;
 }
 
 .section-title {
@@ -39,6 +40,7 @@ body {
 
 /* landing section */
 .landing {
+    margin-top: 5%;
     padding: 1em;
 }
 .about-container {
@@ -158,6 +160,7 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1;
+  top: 0;
 }
 
 header::after {
