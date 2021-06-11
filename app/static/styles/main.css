@@ -11,44 +11,6 @@ body {
     margin: 0px;
 }
 
-.nav-bar {
-    width: 100%;
-    display: inline-block;
-    background-color: #1C539F;
-    font-family: "Roboto", serif;
-    font-weight: 700 !important;
-    padding-top: 10px;
-}
-
-.nav-content .logo-touch-target {
-    display: inline-flex;
-    height: 60%;
-    width: 350px;
-}
-
-.nav-content .nav-logo {
-    height: 60px;
-    margin: auto;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-logo img {
-    width: 200px;
-}
-
-.nav-content nav {
-    display: block;
-    width: 100%;
-    text-align: right;
-    padding-top: 0px;
-    padding-right: 0px;
-}
-
 .profile {
     background-color: #1d539f !important;
     text-align: center;
@@ -111,6 +73,7 @@ body {
     text-align: center;
 }
 
+/* projects section */
 .project-grid {
     display: flex;
     flex-wrap: wrap;
@@ -175,4 +138,72 @@ body {
     width: 80%;
     text-align: center;
     font-size: 1em;
+}
+
+/* navbar section */
+nav {
+    float: left;
+}
+
+.nav_container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+  background: rgb(58, 58, 58);
+}
+
+header::after {
+    content:'';
+    display: table;
+    clear: both;
+}
+
+.icon {
+    float: right;
+    margin: 10px;
+    padding: 5px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 27px;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+nav ul > li > a {
+  color: rgb(212, 212, 212);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+    color: rgb(143, 143, 143);
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(143, 143, 143);
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 200ms;
+}
+
+nav a:hover::before {
+    width: 100%;
 }
