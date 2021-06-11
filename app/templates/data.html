@@ -26,10 +26,11 @@
 <h3>{{ main }}</h3>
 {% for datum in data[main] %}
 <div class="row">
-    <div class="column"></div>
     <div class="column">
-	<h5>{{ datum["name"] }}</h5>
-	<h5>{{ datum["date"] }}</h5>
+	<text><b>{{ datum["name"] }}</b></text>
+    <br>
+	<text><i>{{ datum["date"] }}</i></text>
+    <br>
 	<text>{{ datum["details"] }}</text>
     </div>
 </div>
