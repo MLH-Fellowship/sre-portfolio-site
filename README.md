@@ -1,5 +1,13 @@
 # Flask-blog (Web Portfolio)
+Web portfolio for MLH Fellowship Production Engineering track using the [Flask-blog template](https://github.com/MLH-Fellowship/flask-blog).
 
+## Description
+
+This blog has an about me, portfolio, and contact section. In the about me section, you can input any information about yourself that you believe is relevant to get to know you. In the portfolio section, you can display images of your work and a description of it. The images are linked so that you can attach a link to where your projects can be viewed in full. The contact section is so that people can take action after viewing your website, instead of it being a one-sided interface.
+
+## Badges
+![Mit License](https://img.shields.io/apm/l/vim-mode)
+![Code Size](https://img.shields.io/github/languages/code-size/Leeiaisabelle/flask-blog)
 
 ## Installation
 
