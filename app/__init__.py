@@ -1,9 +1,18 @@
 import os
-from flask import Flask, render_template, send_from_directory
+import firebase_admin
+from flask import Flask, request, jsonify, redirect, render_template, send_from_directory
 from dotenv import load_dotenv
+from firebase_admin import credentials, firestore, initialize_app
+from datetime import datetime
 
 load_dotenv()
 app = Flask(__name__)
+
+#Initialize Firestore DB
+cred = credentials.Certificate('firebase-key.json')
+default_app = initialize_app(cred)
+db = firestore.client()
+posts_ref = db.collection('posts')
 
 
 @app.route('/')
@@ -12,15 +21,26 @@ def index():
 
 @app.route('/add-blog-post', methods=['GET', 'POST'])
 def addBlogPost():
-    if request.method == 'POST':
-        # Create function create post that
-            # Sends data to firebase
-            # Redirects to all existing posts 
-        return create_post()
-    else:
-        return render_template('add-blog-post.html', url=os.getenv("URL"))
+    try: 
+        if request.method == 'POST':
+            postdata = dict(request.form)
+            new_post = {
+                "title": postdata["title"],
+                "content": postdata["content"],
+                "date": datetime.now()
+            }
+            posts_ref.add(new_post)
 
-@app.route('/blog')
+            return redirect(os.getenv("URL") + 'blog')
+        else:
+            return render_template('add-blog-post.html', url=os.getenv("URL"))
+    except (Exception) as e:
+        return f"An error Ocurred: {e}"
+
+@app.route('/blog', methods=['GET'])
 def blog():
-    #Pass blog posts parameter so it actually renders all of them
-    return render_template('blog.html', url=os.getenv("URL"))
+    try: 
+        all_posts = [doc.to_dict() for doc in posts_ref.stream()]
+        return render_template('blog.html', posts=all_posts, url=os.getenv("URL"))
+    except (Exception) as e:
+        return f"An error Ocurred: {e}"
