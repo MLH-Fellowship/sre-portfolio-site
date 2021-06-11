@@ -5,3 +5,4 @@ Jinja2==3.0.1
 MarkupSafe==2.0.1
 python-dotenv==0.17.1
 Werkzeug==2.0.1
+gunicorn==20.1.0
