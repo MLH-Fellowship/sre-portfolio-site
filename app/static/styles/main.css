@@ -217,6 +217,28 @@ nav a:hover::before {
     width: 100%;
 }
 
+/* @media screen and (max-width: 600px) {
+    .nav-bar >div > a:not(:first-child) {display: none;}
+    .nav-bar > div > a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .nav-bar.nav-content {position: relative;}
+    .nav-bar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.nav-content a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  } */
+
 /* experience section */
 
 .timeline {
