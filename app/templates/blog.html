@@ -1,11 +1,16 @@
 <!-- Display all existing posts -->
-{% extends "header.html" %}
+{% include "header.html" %}
 
 <body>
   {% include "navbar.html" %}
 
   <div class="content">
-
+    <div>
+      {% for post in posts %}
+        <p>{{post.title}}</p>
+        <p>{{post.content}}</p>
+      {% endfor %}
+    </div>
   </div>
 </body>
 </html>
