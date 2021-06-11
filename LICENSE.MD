@@ -9,4 +9,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Portions of this software are copyright of their respective authors and released
 under the MIT license:
 
-Spotlight Cursor Text Screen, Copyright 2021, Caroline Artz
+Spotlight Cursor Text Screen, Copyright 2021, Caroline Artz (https://codepen.io/carolineartz/pen/rNaGQYo)
