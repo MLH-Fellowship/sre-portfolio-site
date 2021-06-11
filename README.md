@@ -1,6 +1,6 @@
 # Flask-blog (Web Portfolio)
 
-Web portfolio for MLH Fellowship Production Engineering track using the Flask-blog template.
+Web portfolio for MLH Fellowship Production Engineering track using the [Flask-blog template](https://github.com/MLH-Fellowship/flask-blog).
 
 ## Description
 
@@ -38,6 +38,13 @@ Start flask development server
 $ export FLASK_ENV=development
 $ flask run
 ```
+## Roadmap
+- [ ] Implement functionality of contact form (make it so that the message is stored)
+- [ ] Look for more opportunities to incorporate Flask (for example, using a database to store Portfolio information)
+
+## Authors
+* Leeia Isabelle ([leeiaisabelle](https://github.com/Leeiaisabelle))</br>
+* Nicole Souydalay ([nicolesouydalay](https://github.com/nicolesouydalay))
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
