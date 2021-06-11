@@ -10,3 +10,4 @@ Portions of this software are copyright of their respective authors and released
 under the MIT license:
 
 Spotlight Cursor Text Screen, Copyright 2021, Caroline Artz (https://codepen.io/carolineartz/pen/rNaGQYo)
+</br>Bouncing Arrow, Copyright 2021, Yannick Bisaillon (https://codepen.io/bisaillonyannick/pen/pvZeGg)
