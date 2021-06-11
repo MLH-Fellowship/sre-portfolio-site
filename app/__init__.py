@@ -8,6 +8,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
+    return render_template('index.html', url=os.getenv("URL"))
 
-# Add Route for Blog -> Integrate Markdown and Firebase
+@app.route('/add-blog-post', methods=['GET', 'POST'])
+def addBlogPost():
+    if request.method == 'POST':
+        # Create function create post that
+            # Sends data to firebase
+            # Redirects to all existing posts 
+        return create_post()
+    else:
+        return render_template('add-blog-post.html', url=os.getenv("URL"))
+
+@app.route('/blog')
+def blog():
+    #Pass blog posts parameter so it actually renders all of them
+    return render_template('blog.html', url=os.getenv("URL"))
