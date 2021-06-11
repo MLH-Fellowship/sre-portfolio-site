@@ -1,5 +1,4 @@
 import os
-import firebase_admin
 from flask import Flask, request, jsonify, redirect, render_template, send_from_directory
 from dotenv import load_dotenv
 from firebase_admin import credentials, firestore, initialize_app
