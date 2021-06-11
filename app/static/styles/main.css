@@ -64,6 +64,7 @@ body {
 }
 
 .section-title {
+    text-align: center;
     margin-top: 1rem;
     font-size: 3em;
 }
@@ -95,7 +96,7 @@ body {
     text-align: left;
 }
 
-.about-details > button {
+.about-details > button, .form-container > form > button {
     margin-bottom: 1rem;
     cursor: pointer;
     border-radius: 3px;
@@ -370,4 +371,36 @@ nav a:hover::before {
     .timeline-event:before, .timeline-event:after {
         display: none;
     }
+}
+
+/* form section */
+
+.form-container {
+    display: block;
+    margin: 2rem auto;
+    text-align: center;
+    max-width: 1150px;
+    padding: 40px;
+}
+.form-container > form > label {
+    font-size: 1.5em;
+    text-align: left;
+}
+.form-container > form > label,  .form-container > form > button{
+    display: block;
+    margin: 0 auto;
+}
+
+.form-container > form > input, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px;
 }
