@@ -155,6 +155,9 @@ nav {
 
 header {
   background: rgb(58, 58, 58);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 header::after {
