@@ -1,12 +1,13 @@
-# Flask-Blog
+# Flask-blog (Web Portfolio)
+Web portfolio for MLH Fellowship Production Engineering track using the [Flask-blog template](https://github.com/MLH-Fellowship/flask-blog).
 
-Minimal Flask template to get started on your blog application for MLH Fellowship Production Engineering track.
+## Description
 
-## Getting Started
+This blog has an about me, portfolio, and contact section. In the about me section, you can input any information about yourself that you believe is relevant to get to know you. In the portfolio section, you can display images of your work and a description of it. The images are linked so that you can attach a link to where your projects can be viewed in full. The contact section is so that people can take action after viewing your website, instead of it being a one-sided interface.
 
-To make a copy of the Flask website, just use [generate your own here](https://github.com/MLH-Fellowship/flask-blog/generate).
-
-You don't need to submit any pull requests to thie repository. This is just a template to help you get started
+## Badges
+![Mit License](https://img.shields.io/apm/l/vim-mode)
+![Code Size](https://img.shields.io/github/languages/code-size/Leeiaisabelle/flask-blog)
 
 ## Installation
 
@@ -36,6 +37,13 @@ Start flask development server
 $ export FLASK_ENV=development
 $ flask run
 ```
+## Roadmap
+- [ ] Implement functionality of contact form (make it so that the message is stored)
+- [ ] Look for more opportunities to incorporate Flask (for example, using a database to store Portfolio information)
+
+## Authors
+* Leeia Isabelle ([leeiaisabelle](https://github.com/Leeiaisabelle))</br>
+* Nicole Souydalay ([nicolesouydalay](https://github.com/nicolesouydalay))
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
