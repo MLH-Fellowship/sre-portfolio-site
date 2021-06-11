@@ -1,44 +1,49 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/utilities";
+
 p, h1, h2, h3, h4, h5, h6, button {
-    font-family: "Roboto", serif;
+    font-family: "Roboto", sans-serif;
 }
 
 body {
-    background-color: #f5f5f9;
+    background-color: #EDEBEB;
     background-size: cover;
     width: auto; 
     overflow-x: hidden;
-    font-family: "Roboto", serif;
+    font-family: "Roboto", sans-serif;
+    margin: 0px;
+    cursor: none;
+}
+
+/* Navigation bar */
+.navbar-brand{
+    font-size: 20pt;
+    font-family: "Montserrat", serif;
+    text-transform: lowercase;    
+    text-align: left;
     margin: 0px;
 }
 
-.nav-bar {
-    width: 100%;
-    display: inline-block;
-    background-color: #1C539F;
-    font-family: "Roboto", serif;
-    font-weight: 700 !important;
-    padding-top: 10px;
+.nav-link {
+    font-size: 12pt;
+    text-transform: lowercase;
 }
 
 .nav-content .logo-touch-target {
     display: inline-flex;
     height: 60%;
     width: 350px;
-}
-
-.nav-content .nav-logo {
-    height: 60px;
-    margin: auto;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-logo img {
-    width: 200px;
 }
 
 .nav-content nav {
@@ -49,69 +54,228 @@ body {
     padding-right: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Landing section */
 .landing {
-    background-image: url("/static/img/desktop.jpg");
+    background-color: #EDEBEB;
     background-size: cover;
     height: 100vh;
+    width: 100vw;
     background-repeat: no-repeat;
-
 }
+
+#about-me {
+    background-color: white;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 100px;
+    background-repeat: no-repeat;
+}
+
+.card {
+    float: left;
+    min-height: 70vh;
+    min-width: 40vw;
+    border: 1;
+}
+
+.card-title {
+    font-size: 10vh;
+    font-weight: 700;
+    line-height: 80%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 3px 3px #FFD3B4;
+    color: transparent;
+    text-transform: lowercase;
+    text-align: left;
+    font-family: "Montserrat", serif;
+    padding: 10px;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+
+.card-title B{
+    text-shadow: 3px 3px #D5ECC2;
+}
+
+.card-text {
+    color: gray;
+    padding: 10px;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+
 .profile {
     justify-content: center;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 75px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
-    vertical-align: center;
+    position: relative;
 }
 
 .profile h1 {
-        font-size: 50px;
-        font-weight: 700;
-        color: white;
-}
-
-.profile img {
-        border-radius: 50%;
-        max-width: 100%;
-        max-height: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        padding: 20px;
-}
-
-.profile .profile-picture {
-    margin-bottom: 30px;
-    height: 200px;
-}
-
-.profile p {
-            font-size: 50px;
-        font-weight: 700;
-        color: white;
-}
-.banner {
-    padding: 20px 0px 50px 0px;
-    height: 150px;
-    background-color: #1d539f;
-}
-
-.banner .logo {
-    max-width:180px;
-    max-height:60px;
-    width: auto;
-    height: auto;
-}
-
-.banner .title {
-    color: white;
-    font-size: 50px;
+    font-size: 30vh;
     font-weight: 700;
+    line-height: 80%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: black;
+    text-transform: lowercase;
+    text-align: left;
+    font-family: "Montserrat", serif;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-weight: 900;
+    padding-bottom: 50px;
+}
+
+/* DOWN ARROW ANIMATION CREDIT 
+
+Copyright (c) 2021 by Yannick Bisaillon (https://codepen.io/bisaillonyannick/pen/pvZeGg)
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software 
+    and associated documentation files (the "Software"), to deal in the Software without 
+    restriction, including without limitation the rights to use, copy, modify, merge, publish, 
+    distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom 
+    the Software is furnished to do so, subject to the following conditions:
+    The above copyright notice and this permission notice shall be included in all copies or 
+    substantial portions of the Software.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+    INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR 
+    PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR 
+    ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+    ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+    SOFTWARE.
+*/
+
+.fa { 
+    color: black; 
+    text-decoration: none; 
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.fa:hover {
+    color: #FFE74C; 
+    text-decoration:none;
+}
+
+.arrow {
+    margin: 2% 50%;
+    z-index: 1;
+    position: absolute;   
+    bottom: 0;
+}
+
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+    }
+    40% {
+    transform: translateY(-30px);
+    }
+    60% {
+    transform: translateY(-15px);
+    }
 }
 
 section {
     justify-content: center;
+}
+
+/*
+    SPOTLIGHT TEXT ANIMATION CREDIT
+
+    Copyright (c) 2021 by Caroline Artz (https://codepen.io/carolineartz/pen/rNaGQYo)
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy of this software 
+    and associated documentation files (the "Software"), to deal in the Software without 
+    restriction, including without limitation the rights to use, copy, modify, merge, publish, 
+    distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom 
+    the Software is furnished to do so, subject to the following conditions:
+    The above copyright notice and this permission notice shall be included in all copies or 
+    substantial portions of the Software.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+    INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR 
+    PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR 
+    ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+    ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+    SOFTWARE.
+*/
+
+.shapes {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: #98ddca;
+    overflow: hidden;
+}
+
+.shape {
+    will-change: transform;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape.shape-1 {
+    background: #98ddca;
+    width: 650px;
+    height: 650px;
+    margin: -325px 0 0 -325px;
+}
+
+.shape.shape-2 {
+    background: #d5ecc2;
+    width: 440px;
+    height: 440px;
+    margin: -220px 0 0 -220px;
+}
+
+.shape.shape-3 {
+    background: #ffd3b4;
+    width: 270px;
+    height: 270px;
+    margin: -135px 0 0 -135px;
+}
+.cursor {
+    position: fixed;
+    background: #98ddca;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    will-change: transform;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+  }
+  
+.content {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: #fff;
+    mix-blend-mode: screen;
 }
