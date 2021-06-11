@@ -1,10 +1,10 @@
-# Flask-Blog
+# Flask-blog (Web Portfolio)
 
-Flask blog for MLH Fellowship Production Engineering track using the template.
+Web portfolio for MLH Fellowship Production Engineering track using the Flask-blog template.
 
 ## Descrption
 
-This blog has an about me, profile, resume, and contact section.
+This blog has an about me, portfolio, and contact section. In the about me section, you can input any information about yourself that you believe is relevant to get to know you. In the portfolio section, you can display images of your work and a description of it. The images are linked so that you can attach a link to where your projects can be viewed in full. The contact section is so that people can take action after viewing your website, instead of it being a one-sided interface.
 
 ## Installation
 
