@@ -14,7 +14,6 @@ default_app = initialize_app(cred)
 db = firestore.client()
 posts_ref = db.collection('posts')
 
-
 @app.route('/')
 def index():
     return render_template('index.html', url=os.getenv("URL"))
