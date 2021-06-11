@@ -1,7 +1,10 @@
 # Flask-Blog
 
-Minimal Flask template to get started on your blog application for MLH Fellowship Production Engineering track.
- 
+Flask blog for MLH Fellowship Production Engineering track using the template.
+
+## Descrption
+
+This blog has an about me, profile, resume, and contact section.
 
 ## Installation
 
