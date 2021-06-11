@@ -27,12 +27,14 @@ body {
 }
 
 /* Navigation bar */
+
 .navbar-brand{
     font-size: 20pt;
     font-family: "Montserrat", serif;
     text-transform: lowercase;    
     text-align: left;
     margin: 0px;
+    padding-right: 10vh;
 }
 
 .nav-link {
