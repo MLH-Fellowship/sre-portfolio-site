@@ -1,11 +1,26 @@
 <!-- Form to add a new post -->
-{% extends "header.html" %}
+{% include "header.html" %}
 
 <body>
   {% include "navbar.html" %}
 
   <div class="content">
+    <h2 class="section-title">Add New Post</h2>
+    <div class="form-container">
+      <form action="{{url}}add-blog-post" method="POST">
+        <label> Title </label>
+        <input type="text" name="title" required/>
 
+        <label> Content </label>
+        <textarea 
+          name="content" 
+          required 
+          placeholder="content here...">
+        </textarea>
+
+        <button>Submit</button>
+      </form>
+    </div>
   </div>
 </body>
 </html>
