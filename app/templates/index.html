@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-<script src="../static/styles/style.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
-
 <head>
-  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="../static/styles/style.js"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,44 +16,38 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- Local CSS -->
+    <link lang='sass' rel="stylesheet" href="./static/styles/article-list.css">
     <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
+    <link lang='sass' rel="stylesheet" href="./static/styles/contact-me.css">
+
+    <!-- Font Awesome -->
     <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
     <script src="https://kit.fontawesome.com/b72669b8fc.js" crossorigin="anonymous"></script>
+
     <title>{{ title }}Software Developer</title>
 </head>
-
-  <nav class="navbar navbar-toggleable-md pull-right fixed-top navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">{{name}}</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about-me">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#resume">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact-me">Contact Me</a>
-          </li>
-        </ul>
-      </div>
-      </div>
-    </div>
-  </nav>
-
 <body>
-  
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="#">{{ name }}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#about-me">About Me</a>
+      <a class="nav-item nav-link" href="#portfolio">Portfolio</a>
+        <a class="nav-item nav-link" href="#portfolio">Resume</a>
+        <a class="nav-item nav-link" href="#contact-me">Contact Me</a>
+    </div>
+  </div>
+</nav>
+  <!-- End Navbar -->
   <div class="cursor"></div>
   <div class="landing">
   
@@ -95,14 +84,103 @@
     <div class="col-sm-6">
       <div class="card" class="rounded">
         <div class="card-body">
-          <p class="card-text">image here
-          </p>
+          <p class="card-text">image here</p>
         </div>
       </div>
     </div>
   </div>
-  
 </section>
+  <!-- Portfolio -->
+    <section class="article-list">
+        <div class="container">
+            <div class="intro">
+                <h5 class="card-title">p<B>r</B>o<B>j</b>e<b>c</b>t<B>s</B></h5>
+                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae. </p>
+            </div>
+            <div class="row articles">
+                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="static/img/ryunosuke-unsplash.jpg"></a>
+                    <h3 class="name">Ipsum Title</h3>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
+                </div>
+                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="static/img/daniel-korpai-unsplash.jpg"></a>
+                    <h3 class="name">Ipsum Title</h3>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
+                </div>
+                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="static/img/sharon-mccutcheon-unsplash.jpg"></a>
+                    <h3 class="name">Ipsum Title</h3>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
+                </div>
+
+                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="static/img/setyaki-irham-unsplash.jpg"></a>
+                    <h3 class="name">Ipsum Title</h3>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
+                </div>
+                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="static/img/ajeet-mestry-unsplash.jpg"></a>
+                    <h3 class="name">Ipsum Title</h3>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
+                </div>
+                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="static/img/joan-gamell-unsplash.jpg"></a>
+                    <h3 class="name">Ipsum Title</h3>
+                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- End Portfolio -->
+<!-- Resume -->
+<section id="resume"></section>
+<!-- End Resume -->
+<!-- Contact Me -->
+<section id="contact-me">
+    	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					<h5 class="card-title">d<B>r</B>o<B>p </b>a <b>l</b>i<B>n</B><B>e</B>!</h5>
+				</span>
+
+				<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
+					<span class="label-input100">FULL NAME *</span>
+					<input class="input100" type="text" name="name" placeholder="First M. Last">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
+					<span class="label-input100">Email *</span>
+					<input class="input100" type="text" name="email" placeholder="someone@somewhere.com">
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">Phone</span>
+					<input class="input100" type="text" name="phone" placeholder="Enter Number Phone">
+				</div>
+
+				<div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
+					<span class="label-input100">Message</span>
+					<textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							Submit
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+        <div class="social-media">
+        <ul>
+            <a href="www.github.com"><li><i class="fab fa-github-alt"></i></li></a>
+            <a href="www.linkedin.com"><li><i class="fab fa-linkedin-in"></i></li></a>
+            <a href="www.twitter.com"><li><i class="fab fa-twitter"></i></li></a>
+            <a href="www.snapchat.com"><li><i class="fab fa-snapchat-ghost"></i></li></a>
+            <a href="www.facebook.com"><li><i class="fab fa-facebook-f"></i></li></a>
+        </ul>
+        </div>
+	</div>
+
+</section>
+<!-- End Contact Me -->
 <section id="portfolio"></section>
 <section id="resume"></section>
 <section id="contact-me"></section>
@@ -123,7 +201,9 @@
       stagger: -0.1 
     });
 
+
   })
 </script>
 </body>
 </html>
+
