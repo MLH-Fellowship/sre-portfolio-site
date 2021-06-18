@@ -217,15 +217,15 @@ nav a:hover::before {
     width: 100%;
 }
 
-/* @media screen and (max-width: 600px) {
-    .nav-bar >div > a:not(:first-child) {display: none;}
-    .nav-bar > div > a.icon {
+ @media screen and (max-width: 600px) {
+    .nav-content >div > a:not(:first-child) {display: none;}
+    .nav-content > div > a.icon {
       float: right;
       display: block;
     }
   }
   
-  @media screen and (max-width: 600px) {
+/*  @media screen and (max-width: 600px) {
     .nav-bar.nav-content {position: relative;}
     .nav-bar.responsive .icon {
       position: absolute;

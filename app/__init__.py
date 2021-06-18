@@ -1,9 +1,11 @@
 import os
-from flask import Flask, request, jsonify, redirect, render_template, send_from_directory
+from flask import Flask, request, redirect, render_template, send_from_directory
 from dotenv import load_dotenv
 from firebase_admin import credentials, firestore, initialize_app
 from datetime import datetime
 import json
+
+from flask.typing import StatusCode
 
 load_dotenv()
 app = Flask(__name__)
@@ -44,3 +46,15 @@ def blog():
         return render_template('blog.html', posts=all_posts, url=os.getenv("URL"))
     except (Exception) as e:
         return f"An error Ocurred: {e}"
+
+@app.route('/health')
+def health():
+    try:
+        res = app.response_class(
+            response = "Successful request",
+            status = 200,
+            mimetype = 'application.json'
+        )
+        return res
+    except (Exception) as e:
+        return f"An error ocurre: {e}"
