@@ -37,3 +37,7 @@ def accomplishments():
                            side1="Experience",
                            side2="Projects",
                            url=os.getenv("URL"))
+
+@app.route("/health")
+def health():
+    return {}
