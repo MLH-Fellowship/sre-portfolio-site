@@ -2,9 +2,12 @@ import os
 import json
 from flask import Flask, render_template, send_from_directory
 from dotenv import load_dotenv
+from . import db
 
 load_dotenv()
 app = Flask(__name__)
+app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
+db.init_app(app)
 
 f = open("./lavina.json")
 data = json.load(f)
