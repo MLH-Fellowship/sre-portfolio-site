@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # use this when flask is already running
+printf "IMPORTANT: as written right now, this will nuke existing SQL database in the process of testing it. change this before it goes into production.\n\n"
 
 url=$1
 
