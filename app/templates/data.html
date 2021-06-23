@@ -1,20 +1,6 @@
 {% extends "layout.html" %}
 {% block header %}{{ data["name"] }}{% endblock %}
 {% block body %}
-<body>
-    <div class="profile">
-	<div class="row">
-	    <div class="column">
-		<h2>Hi! I am</h2>
-		<h1>{{ data["name"] }}</h1>
-		<h4>{{ data["title"] }}</h4>
-		<text>{{ data["about"] }}</text>
-	    </div>
-	    <div class="column">
-		<a href="/"><img src="/static/img/profile-pic.png" style="width: 275px; height: 225px" /></a>
-	    </div>
-	</div>
-    </div>
     <div class="technical-side">
 	<h4>Skills</h4>
 	<ul class="no-bullets">
@@ -58,6 +44,5 @@
     	</text>
     	{% endfor %}
     </div>
-</body>
 
 {% endblock %}

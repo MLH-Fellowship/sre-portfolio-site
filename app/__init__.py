@@ -78,7 +78,7 @@ def register():
         else:
             return error, 418
     # TODO: return a register page
-    return "Register page not implemented", 501
+    return render_template("login.html", data=data, mode="register")
 
 @app.route("/login", methods=("GET", "POST"))
 def login():
@@ -102,4 +102,4 @@ def login():
         else:
             return error, 418
         # TODO: Return a login page
-    return "Login page not implemented", 501
+    return render_template("login.html", data=data, mode="login")

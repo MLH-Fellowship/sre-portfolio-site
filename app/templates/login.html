@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block header %}{{ mode|capitalize }}{% endblock %}
+{% block body %}
+<br>
+<body>
+    <h1>{{ mode|capitalize }}</h1>
+    <form action="/{{ mode }}" method="post" target="_self">
+	<label for="username">Username:</label>
+	<input id="username" name="username" type="text" /><br>
+	<label for="password">Password:</label>
+	<input id="password" name="password" type="password" /><br>
+	<input type="submit" value="submit">
+    </form>
+</body>
+{% endblock %}
