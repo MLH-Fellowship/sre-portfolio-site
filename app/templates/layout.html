@@ -22,32 +22,8 @@
 	<title>{% block header %}{% endblock %}</title>
     </head>
     <header>
-	<a href="#">Contact</a>
-	<a href="#">Resume</a>
+	<!-- <a href="#">Contact</a> -->
+	<!-- <a href="#">Resume</a> -->
     </header>
-
-    <body>
-	<div class="profile">
-	    <div class="row">
-		<div class="column">
-		    <h2>Hi! I am</h2>
-		    <h1>{% block name %}{% endblock %}</h1>
-		    <h4>{% block title %}{% endblock %}</h4>
-		    <text> {% block about %}{% endblock %} </text>
-		</div>
-		<div class="column">
-		    <a href="/"><img src="/static/img/profile-pic.png" style="width: 275px; height: 225px" /></a>
-		</div>
-	    </div>
-	</div>
-	<div class="technical-side">
-	    {% block skills %}{% endblock %}
-	    {% block main %}{% endblock %}
-	</div>
-	<div>
-	    {% block education %}{% endblock %}
-	    {% block side1 %}{% endblock %}
-	    {% block side2 %}{% endblock %}
-	</div>
-    </body>
+    {% block body %}{% endblock %}
 </html>
