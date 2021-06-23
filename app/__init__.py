@@ -10,3 +10,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', title="Nicole Souydalay | ", url=os.getenv("URL"), name="NICOLE")
 
+@app.route('/health', methods=['GET'])
+def health():
+    return "200"
