@@ -7,41 +7,39 @@
 	    name="viewport"
 	    content="width=device-width, initial-scale=1, shrink-to-fit=no"
 	    />
-	<meta property="og:title" content="Personal Portfolio" />
-	<meta property="og:description" content="My Personal Portfolio" />
-	<meta property="og:url" content="{{ url }}" />
-
-	<link rel="preconnect" href="https://fonts.gstatic.com" />
-	<link
-	    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-	    rel="stylesheet"
-	    />
+	<meta property="og:title" content="Autumn Chiu" />
+	<meta property="og:description" content="Blog and projects for Autumn Chiu" />
 
 	<link lang="sass" rel="stylesheet" href="/static/styles/blog.css" />
 	<link rel="icon" href="/static/img/favicon.ico" type="image/x-icon" />
-	<title>blong</title>
+	<title>{{ title }}</title>
     </head>
     <body>
 	<div id="bg">
 	    <h1><a href="/">Autumn Chiu</a></h1>
 	    <div id="heading">
 		<span><a href="#">Projects</a></span>
-		<span><a href="#">Blog</a></span>
-		<span><a href="mlh">MLH</a></span>
+		<span><a href="/blog">Blog</a></span>
+		<span><a href="/mlh">MLH</a></span>
 	    </div>
 	    <div id="main">
-		<div id="left"><p>
-		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non tempus ante, vel eleifend purus. Donec odio neque, pellentesque ac tincidunt nec, luctus id lacus. Nullam porttitor vehicula tellus nec eleifend. Aenean ligula eros, facilisis quis tincidunt bibendum, tristique a enim. Aenean malesuada enim dictum consectetur condimentum. Phasellus ut nulla ut purus consequat aliquam. Cras tempus magna ut nulla faucibus, nec tempor dolor tempor. Morbi dignissim vitae nisl eu molestie. Praesent vehicula imperdiet quam. Mauris at neque facilisis, placerat felis euismod, gravida libero. Proin et neque dolor.</p>
-
-		    <p>Sed bibendum venenatis ex vel volutpat. Ut augue lectus, faucibus sed aliquam a, cursus in elit. Pellentesque vel magna id purus fringilla ultricies. Nam auctor mauris nec ultrices semper. Suspendisse felis ipsum, accumsan at arcu eu, scelerisque auctor mauris. Sed lobortis ipsum mauris, ut dapibus nisi sagittis quis. Sed ac elit eu ipsum sodales lacinia vel at ipsum. Duis magna augue, venenatis sit amet dignissim ut, ultricies quis enim. Donec luctus aliquam nisl eu facilisis.</p>
-
-		    <p>Nunc eleifend nisl nec felis elementum ullamcorper. Suspendisse potenti. Nam in mi non turpis lobortis vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque quis mattis odio, eu interdum libero. Vestibulum lacinia consectetur neque ac molestie. Phasellus odio tellus, viverra non imperdiet id, scelerisque vel lacus. Nunc cursus, libero eu tincidunt congue, lorem felis tempus dui, consequat auctor risus nibh sit amet tellus. Donec accumsan, est at dictum consequat, metus purus dapibus justo, vitae cursus odio erat sit amet eros.</p>
+		<div id="left"
+		     {% if text == "" %}
+		     style="display:none;"
+		     {% endif %}>
+		    {{ text|markdown }}
 		</div>
 		
 		<div id="right">
-		    <p>Autumn is a good writer</p>
-		    <p>Autumn is a good writer</p>
-		    <p>Autumn is a good writer</p>
+		    <i>
+			<p>Autumn Chiu is a programmer, writer, and the best of the mediocre chess players.  She is currently studying with MLH as a Production Engineering fellow.</p>
+			<p>Latest:</p>
+		    </i>
+		    <ul>
+			{% for post in posts %}
+			<li><a href="/blog/{{ post }}">{{ post_titles[loop.index0] }}</a></li>
+			{% endfor %}
+		    </ul>
 		</div>
 	    </div>
 	</div>

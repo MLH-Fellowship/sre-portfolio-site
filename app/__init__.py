@@ -1,13 +1,16 @@
 import os
+import re
 import json
 from flask import Flask, render_template, send_from_directory, request
 from dotenv import load_dotenv
 from werkzeug.security import generate_password_hash, check_password_hash
+from flaskext.markdown import Markdown
 
 from . import db
 
 load_dotenv()
 app = Flask(__name__)
+Markdown(app)
 app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
 db.init_app(app)
 
@@ -17,7 +20,42 @@ f = open("./lavina.json")
 data = json.load(f)
 f.close()
 
-@app.route('/mlh')
+POSTDIR = "./posts/"
+
+@app.route("/")
+@app.route("/blog/")
+@app.route("/blog/<post>")
+def blog(post=None):
+    p = re.compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}.+\.md$")
+    posts = list(filter(p.match, os.listdir(POSTDIR)))
+    posts.sort()
+    posts.reverse()
+    post_titles = []
+    for s in posts:
+        with open(POSTDIR+s) as f:
+            post_titles.append(f.readline().replace("## ", "").strip())
+    text=""
+    title="Autumn Chiu"
+    
+    if request.path == "/":
+        post=posts[0]
+    if post != None:
+        posts=posts[:5]
+        with open(POSTDIR+post, "r") as f:
+            text=f.read()
+            title=text.partition("\n")[0].replace("## ", "") + " | " + title
+    return render_template("blog.html",
+                           title=title,
+                           text=text,
+                           posts=posts,
+                           post_titles=post_titles)
+
+@app.route("/health")
+def health():
+    return "im healthy!"
+
+# mlh routes
+
 @app.route('/mlh/')
 @app.route('/mlh/Experience/')
 def index():
@@ -45,15 +83,6 @@ def accomplishments():
                            side1="Experience",
                            side2="Projects",
                            url=os.getenv("URL"))
-
-@app.route("/")
-@app.route("/blog")
-def blog():
-    return render_template("blog.html")
-
-@app.route("/health")
-def health():
-    return "im healthy!"
 
 # database shenanigans
 
