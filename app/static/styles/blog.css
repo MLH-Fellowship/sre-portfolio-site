@@ -13,18 +13,19 @@ div {
     border-radius: 20px;
 }
 
+h1 {
+    text-align: center;
+}
+
 #bg {
+    margin: 20px;
     background-color: #554c5f;
 }
 
 #heading {
     text-align: center;
     display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-#heading h1 {
-    grid-column: 1 / span 2;
+    grid-template-columns: auto auto;
 }
 
 #heading span {
@@ -33,7 +34,8 @@ div {
 
 #main {
     display: grid;
-    grid-template-columns: 60% 30%;
+    grid-template-columns: 70% 30%;
+    grid-column-gap: 20px;
     justify-content: space-around;
 }
 
@@ -48,8 +50,9 @@ div {
     margin-bottom: auto;
 }
 
-@media only screen and (max-width: 720px) {
-    #left {
-	grid-column: 1 / span 2;
+@media only screen and (max-width: 1080px) {
+    #main {
+	grid-template-columns: auto;
+	grid-row-gap: 20px;
     }
 }
