@@ -17,6 +17,16 @@ h1 {
     text-align: center;
 }
 
+a:link,
+a:visited {
+    color: #ffe2fc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #aa92ac;
+}
+
 #bg {
     margin: 20px;
     background-color: #554c5f;

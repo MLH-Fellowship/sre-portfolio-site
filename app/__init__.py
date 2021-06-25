@@ -17,8 +17,9 @@ f = open("./lavina.json")
 data = json.load(f)
 f.close()
 
-@app.route('/')
-@app.route('/Experience/')
+@app.route('/mlh')
+@app.route('/mlh/')
+@app.route('/mlh/Experience/')
 def index():
     return render_template('data.html',
                            data=data,
@@ -27,7 +28,7 @@ def index():
                            side2="Accomplishments",
                            url=os.getenv("URL"))
 
-@app.route('/Projects/')
+@app.route('/mlh/Projects/')
 def projects():
     return render_template('data.html',
                            data=data,
@@ -36,7 +37,7 @@ def projects():
                            side2="Accomplishments",
                            url=os.getenv("URL"))
 
-@app.route('/Accomplishments/')
+@app.route('/mlh/Accomplishments/')
 def accomplishments():
     return render_template('data.html',
                            data=data,
@@ -45,6 +46,7 @@ def accomplishments():
                            side2="Projects",
                            url=os.getenv("URL"))
 
+@app.route("/")
 @app.route("/blog")
 def blog():
     return render_template("blog.html")
@@ -55,7 +57,7 @@ def health():
 
 # database shenanigans
 
-@app.route("/register", methods=("GET", "POST"))
+@app.route("/mlh/register", methods=("GET", "POST"))
 def register():
     if request.method == "POST":
         username = request.form.get("username")
@@ -84,7 +86,7 @@ def register():
     # TODO: return a register page
     return render_template("login.html", data=data, mode="register")
 
-@app.route("/login", methods=("GET", "POST"))
+@app.route("/mlh/login", methods=("GET", "POST"))
 def login():
     if request.method == "POST":
         username = request.form.get("username")

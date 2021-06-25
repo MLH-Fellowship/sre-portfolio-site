@@ -29,14 +29,14 @@
     	    {{ data["education"]["school"] }} <br />
     	    {{ data["education"]["date"] }}
     	</text>
-    	<h4><a href="/{{ side1 }}">{{ side1 }}</a></h4>
+    	<h4><a href="/mlh/{{ side1 }}">{{ side1 }}</a></h4>
     	{% for datum in data[side1] %}
     	<text>
     	    {{ datum["name"] }}<br />
     	    {{ datum["date"] }}<br />
     	</text>
     	{% endfor %}
-    	<h4><a href="/{{ side2 }}">{{ side2 }}</a></h4>
+    	<h4><a href="/mlh/{{ side2 }}">{{ side2 }}</a></h4>
     	{% for datum in data[side2] %}
     	<text>
     	    {{ datum["name"] }}<br />
