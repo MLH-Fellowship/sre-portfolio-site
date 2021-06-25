@@ -1,0 +1,5 @@
+bg: #887a98
+panel: #554c5f
+main: #171324
+side: #2a283a
+text: ffe2fc

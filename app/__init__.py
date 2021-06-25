@@ -45,6 +45,10 @@ def accomplishments():
                            side2="Projects",
                            url=os.getenv("URL"))
 
+@app.route("/blog")
+def blog():
+    return render_template("blog.html")
+
 @app.route("/health")
 def health():
     return "im healthy!"
