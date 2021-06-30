@@ -6,7 +6,7 @@ Minimal Flask template to get started on your blog application for MLH Fellowshi
 
 To make a copy of the Flask website, just use [generate your own here](https://github.com/MLH-Fellowship/flask-blog/generate).
 
-You don't need to submit any pull requests to thie repository. This is just a template to help you get started
+You don't need to submit any pull requests to this repository. This is just a template to help you get started.
 
 ## Installation
 
