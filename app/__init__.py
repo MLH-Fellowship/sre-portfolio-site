@@ -14,6 +14,7 @@ from flask_migrate import Migrate
 # load_dotenv()
 
 app = Flask(__name__)
+app.url_map.strict_slashes = False
 Markdown(app)
 # app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{user}:{passwd}@{host}:{port}/{table}'.format(
@@ -80,7 +81,7 @@ def health():
 
 # mlh routes
 
-@app.route('/mlh/')
+@app.route('/mlh')
 @app.route('/mlh/Experience/')
 def index():
     return render_template('data.html',
