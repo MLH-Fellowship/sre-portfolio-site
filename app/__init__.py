@@ -75,13 +75,13 @@ def blog(post=None):
                            posts=posts,
                            post_titles=post_titles)
 
-@app.route("/health")
+@app.route("/health/")
 def health():
     return "im healthy!"
 
 # mlh routes
 
-@app.route('/mlh')
+@app.route('/mlh/')
 @app.route('/mlh/Experience/')
 def index():
     return render_template('data.html',
@@ -111,7 +111,7 @@ def accomplishments():
 
 # database shenanigans
 
-@app.route("/mlh/register", methods=("GET", "POST"))
+@app.route("/mlh/register/", methods=("GET", "POST"))
 def register():
     if request.method == "POST":
         username = request.form.get("username")
@@ -135,7 +135,7 @@ def register():
     # TODO: return a register page
     return render_template("login.html", data=data, mode="register")
 
-@app.route("/mlh/login", methods=("GET", "POST"))
+@app.route("/mlh/login/", methods=("GET", "POST"))
 def login():
     if request.method == "POST":
         username = request.form.get("username")
