@@ -5,6 +5,8 @@ services:
     restart: always
     env_file:
       - .env
+    ports:
+      - 5000:80
     volumes:
       - .:/myportfolio
     depends_on:
