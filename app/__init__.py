@@ -57,7 +57,7 @@ POSTDIR = "./posts/"
 @app.route("/blog/")
 @app.route("/blog/<post>")
 def blog(post=None):
-    p = re.compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}.+\.md$")
+    p = re.compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}.+\\.md$")
     posts = list(filter(p.match, os.listdir(POSTDIR)))
     posts.sort()
     posts.reverse()
@@ -70,7 +70,7 @@ def blog(post=None):
 
     if request.path == "/":
         post = posts[0]
-    if post != None:
+    if post is not None:
         posts = posts[:5]
         with open(POSTDIR + post, "r") as f:
             text = f.read()
