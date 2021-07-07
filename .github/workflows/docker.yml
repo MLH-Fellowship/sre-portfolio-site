@@ -27,5 +27,5 @@ jobs:
       - name: Test docker
         uses: docker/build-push-action@v2
         with:
-	  push: true
+          push: true
           tags: my-portfolio:latest
