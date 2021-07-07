@@ -1,0 +1,31 @@
+name: Docker
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test-docker:
+    name: Test docker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+  
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+  
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+  
+      - name: Test docker
+        uses: docker/build-push-action@v2
+        with:
+	  push: true
+          tags: my-portfolio:latest
