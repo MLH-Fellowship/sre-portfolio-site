@@ -2,6 +2,7 @@ import os
 import re
 import json
 from flask import Flask, render_template, request
+
 # from dotenv import load_dotenv
 from werkzeug.security import generate_password_hash, check_password_hash
 from flaskext.markdown import Markdown
@@ -17,19 +18,22 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 Markdown(app)
 # app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://{user}:{passwd}@{host}:{port}/{table}'.format(
-    user=os.getenv('POSTGRES_USER'),
-    passwd=os.getenv('POSTGRES_PASSWORD'),
-    host=os.getenv('POSTGRES_HOST'),
+app.config[
+    "SQLALCHEMY_DATABASE_URI"
+] = "postgresql+psycopg2://{user}:{passwd}@{host}:{port}/{table}".format(
+    user=os.getenv("POSTGRES_USER"),
+    passwd=os.getenv("POSTGRES_PASSWORD"),
+    host=os.getenv("POSTGRES_HOST"),
     port=5432,
-    table=os.getenv('POSTGRES_DB'))
+    table=os.getenv("POSTGRES_DB"),
+)
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 
 class UserModel(db.Model):
-    __tablename__ = 'users'
+    __tablename__ = "users"
 
     username = db.Column(db.String(), primary_key=True)
     password = db.Column(db.String())
@@ -41,11 +45,13 @@ class UserModel(db.Model):
     def __repr__(self):
         return f"<User {self.username}>"
 
+
 f = open("./lavina.json")
 data = json.load(f)
 f.close()
 
 POSTDIR = "./posts/"
+
 
 @app.route("/")
 @app.route("/blog/")
@@ -57,59 +63,70 @@ def blog(post=None):
     posts.reverse()
     post_titles = []
     for s in posts:
-        with open(POSTDIR+s) as f:
+        with open(POSTDIR + s) as f:
             post_titles.append(f.readline().replace("## ", "").strip())
-    text=""
-    title="Autumn Chiu"
-    
+    text = ""
+    title = "Autumn Chiu"
+
     if request.path == "/":
-        post=posts[0]
+        post = posts[0]
     if post != None:
-        posts=posts[:5]
-        with open(POSTDIR+post, "r") as f:
-            text=f.read()
-            title=text.partition("\n")[0].replace("## ", "") + " | " + title
-    return render_template("blog.html",
-                           title=title,
-                           text=text,
-                           posts=posts,
-                           post_titles=post_titles)
+        posts = posts[:5]
+        with open(POSTDIR + post, "r") as f:
+            text = f.read()
+            title = text.partition("\n")[0].replace("## ", "") + " | " + title
+    return render_template(
+        "blog.html", title=title, text=text, posts=posts, post_titles=post_titles
+    )
+
 
 @app.route("/health/")
 def health():
     return "im healthy!"
 
+
 # mlh routes
 
-@app.route('/mlh/')
-@app.route('/mlh/Experience/')
+
+@app.route("/mlh/")
+@app.route("/mlh/Experience/")
 def index():
-    return render_template('data.html',
-                           data=data,
-                           main="Experience",
-                           side1="Projects",
-                           side2="Accomplishments",
-                           url=os.getenv("URL"))
+    return render_template(
+        "data.html",
+        data=data,
+        main="Experience",
+        side1="Projects",
+        side2="Accomplishments",
+        url=os.getenv("URL"),
+    )
 
-@app.route('/mlh/Projects/')
+
+@app.route("/mlh/Projects/")
 def projects():
-    return render_template('data.html',
-                           data=data,
-                           main="Projects",
-                           side1="Experience",
-                           side2="Accomplishments",
-                           url=os.getenv("URL"))
+    return render_template(
+        "data.html",
+        data=data,
+        main="Projects",
+        side1="Experience",
+        side2="Accomplishments",
+        url=os.getenv("URL"),
+    )
 
-@app.route('/mlh/Accomplishments/')
+
+@app.route("/mlh/Accomplishments/")
 def accomplishments():
-    return render_template('data.html',
-                           data=data,
-                           main="Accomplishments",
-                           side1="Experience",
-                           side2="Projects",
-                           url=os.getenv("URL"))
+    return render_template(
+        "data.html",
+        data=data,
+        main="Accomplishments",
+        side1="Experience",
+        side2="Projects",
+        url=os.getenv("URL"),
+    )
+
 
 # database shenanigans
+
 
 @app.route("/mlh/register/", methods=("GET", "POST"))
 def register():
@@ -134,6 +151,7 @@ def register():
             return error, 418
     # TODO: return a register page
     return render_template("login.html", data=data, mode="register")
+
 
 @app.route("/mlh/login/", methods=("GET", "POST"))
 def login():
