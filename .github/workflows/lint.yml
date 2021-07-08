@@ -29,5 +29,5 @@ jobs:
         with:
           black: true
           flake8: true
-	  flake8_args: "--max-line-length=88"
+          flake8_args: "--max-line-length=88"
           auto_fix: true
