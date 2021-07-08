@@ -76,8 +76,7 @@ def blog(post=None):
             text = f.read()
             title = text.partition("\n")[0].replace("## ", "") + " | " + title
     return render_template(
-        "blog.html", title=title, text=text,
-        posts=posts, post_titles=post_titles
+        "blog.html", title=title, text=text, posts=posts, post_titles=post_titles
     )
 
 
