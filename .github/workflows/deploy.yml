@@ -41,3 +41,6 @@ jobs:
           ssh my-vm
           'cd ${{ secrets.PROJECT_ROOT }} &&
           docker-compose ps'
+
+      - name: Test site endpoints
+        run: ./test-endpoints.sh
