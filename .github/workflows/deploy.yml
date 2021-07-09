@@ -42,6 +42,8 @@ jobs:
           'cd ${{ secrets.PROJECT_ROOT }} &&
           docker-compose ps'
 
-      - name: Test site endpoints
+      - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Test site endpoints
         run: ./test_endpoints.sh
