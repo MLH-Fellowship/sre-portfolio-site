@@ -46,4 +46,5 @@ jobs:
         run: >-
           ssh my-vm
           'cd ${{ secrets.PROJECT_ROOT }} &&
+          sleep 10 &&
           ./test_endpoints.sh'
