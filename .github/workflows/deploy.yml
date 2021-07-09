@@ -43,5 +43,7 @@ jobs:
           docker-compose ps'
 
       - name: Test site endpoints
-        uses: actions/checkout@v2
-        run: ./test_endpoints.sh
+        run: >-
+          ssh my-vm
+          'cd ${{ secrets.PROJECT_ROOT }} &&
+          ./test_endpoints.sh'
