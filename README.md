@@ -54,13 +54,14 @@ This should install click, Flask, itsdangerous, Jinja2, MarkupSafe, python_doten
 
 Create a .env file using the example.env template.
 
-Start flask development server:
-```bash
-$ export FLASK_ENV=development
-$ flask run
-```
+Start flask develpment server.
 
-You should see a message that specifies the IP at which the app is hosted: 127.0.0.1:5000.  Open that address in your browser to confirm that the app is working.
+1. Add `FLASK_ENV=development` to .env
+2. 
+```bash
+$ docker-compose up
+```
+3. You should see a message that specifies the IP at which the app is hosted: 127.0.0.1:5000.  Open that address in your browser to confirm that the app is working.
 
 
 ## A Beginner's Guide to Flask
