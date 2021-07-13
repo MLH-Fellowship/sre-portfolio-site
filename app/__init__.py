@@ -8,6 +8,8 @@ from werkzeug.security import generate_password_hash
 from app.db import get_db
 from werkzeug.security import check_password_hash, generate_password_hash
 from app.db import get_db
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 app = Flask(__name__)
 app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
