@@ -34,6 +34,7 @@ jobs:
           'cd ${{ secrets.PROJECT_ROOT }} &&
           git fetch &&
           git reset --hard origin/master &&
+          docker-compose down &&
           docker-compose up -d --build' 
           
       - name: Print container status
