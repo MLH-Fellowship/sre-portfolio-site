@@ -1,6 +1,7 @@
 version: "3"
 services:
   web:
+    container-name: web
     build: .
     restart: always
     env_file:
@@ -13,12 +14,14 @@ services:
       - db
 
   db:
+    container-name: db
     image: postgres
     restart: always
     env_file:
       - .env
 
   nginx:
+    container-name: nginx
     image: jonasal/nginx-certbot:latest
     restart: unless-stopped
     env_file:
