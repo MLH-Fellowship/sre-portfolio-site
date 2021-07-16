@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ $1 -eq "" ]]
+if [[ "$1" -eq "" ]]
 then
     URL="https://autumnchiu.duckdns.org"
 else

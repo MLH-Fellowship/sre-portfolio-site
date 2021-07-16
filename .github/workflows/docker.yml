@@ -39,4 +39,5 @@ jobs:
           echo "POSTGRES_HOST=${{ secrets.POSTGRES_HOST }}" >> .env &&
           echo "CERTBOT_EMAIL=autumn.chiu.136@gmail.com" > nginx-certbot.env &&
           docker-compose up -d &&
+          sleep 5 &&
           ./test_endpoints.sh localhost:5000
