@@ -32,8 +32,6 @@ jobs:
       - name: Test site endpoints
         run: >-
           sudo ./install_docker.sh &&
-          sudo systemctl start containerd &&
-          sudo systemctl start docker &&
           touch .env &&
           echo "URL=localhost:5000" >> .env &&
           echo "POSTGRES_USER=${{ secrets.POSTGRES_USER }}" >> .env &&
