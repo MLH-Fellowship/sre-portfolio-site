@@ -2,12 +2,12 @@
 
 if [[ $1 -eq "" ]]
 then
-    URL="https://autumnchiu.duckdns.org/"
+    URL="https://autumnchiu.duckdns.org"
 else
     URL=$1
 fi
 
-ROUTES=("" "blog/" "health/" "mlh/" "mlh/Experience/" "mlh/Projects/" "mlh/Accomplishments/" "mlh/register/" "mlh/login/")
+ROUTES=("/" "/blog/" "/health/" "/mlh/" "/mlh/Experience/" "/mlh/Projects/" "/mlh/Accomplishments/" "/mlh/register/" "/mlh/login/")
 EXIT=0
 
 CURL_CMD='curl -s -o /dev/null -w "%{http_code}"'
@@ -34,11 +34,11 @@ for ROUTE in ${ROUTES[@]}; do
 done
 
 echo "curling register POST"
-RESPONSE=$(eval $CURL_CMD $POST "${URL}mlh/register")
+RESPONSE=$(eval $CURL_CMD $POST "${URL}/mlh/register")
 check_route
 
 echo "curling login POST"
-RESPONSE=$(eval $CURL_CMD $POST "${URL}mlh/login")
+RESPONSE=$(eval $CURL_CMD $POST "${URL}/mlh/login")
 check_route
 
 exit $EXIT
