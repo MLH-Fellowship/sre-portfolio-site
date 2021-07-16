@@ -38,7 +38,7 @@ jobs:
           echo "POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}" >> .env &&
           echo "POSTGRES_HOST=${{ secrets.POSTGRES_HOST }}" >> .env &&
           echo "CERTBOT_EMAIL=autumn.chiu.136@gmail.com" > nginx-certbot.env &&
-          docker-compose up -d &&
+          docker-compose up -d --build &&
           sleep 5 &&
           curl localhost:5000/mlh/login/ -X POST -d "username=JonSmith&password=pw123" &&
           docker-compose logs &&
