@@ -33,12 +33,12 @@ for ROUTE in ${ROUTES[@]}; do
     check_route
 done
 
-echo "curling register POST ${URL}/mlh/register"
-RESPONSE=$(eval $CURL_CMD $POST "${URL}/mlh/register")
+echo "curling register POST ${URL}/mlh/register/"
+RESPONSE=$(eval $CURL_CMD $POST "${URL}/mlh/register/")
 check_route
 
-echo "curling login POST ${URL}/mlh/login"
-RESPONSE=$(eval $CURL_CMD $POST "${URL}/mlh/login")
+echo "curling login POST ${URL}/mlh/login/"
+RESPONSE=$(eval $CURL_CMD $POST "${URL}/mlh/login/")
 check_route
 
 exit $EXIT
