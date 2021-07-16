@@ -41,5 +41,5 @@ jobs:
           docker-compose up -d &&
           sleep 5 &&
           curl localhost:5000/mlh/login/ -X POST -d "username=JonSmith&password=pw123" &&
-          ./test_endpoints.sh localhost:5000 &&
           docker-compose logs
+          ./test_endpoints.sh localhost:5000 &&
