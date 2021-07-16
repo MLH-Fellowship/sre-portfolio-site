@@ -32,6 +32,6 @@ jobs:
       - name: Test site endpoints
         run: >-
           sudo ./install_docker.sh &&
-          docker-compose up -d &&
           touch .env &&
+          docker-compose up -d &&
           ./test_endpoints.sh localhost:5000
