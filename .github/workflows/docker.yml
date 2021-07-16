@@ -28,3 +28,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           tags: my-portfolio:latest
+
+      - name: Test site endpoints
+        run: >-
+          sudo ./install_docker.sh &&
+          docker-compose up -d &&
+          ./test_endpoints.sh localhost:5000

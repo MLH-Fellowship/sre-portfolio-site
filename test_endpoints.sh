@@ -1,6 +1,12 @@
 #!/bin/bash
 
-URL="https://autumnchiu.duckdns.org/"
+if [[ $1 -eq "" ]]
+then
+    URL="https://autumnchiu.duckdns.org/"
+else
+    URL=$1
+fi
+
 ROUTES=("" "blog/" "health/" "mlh/" "mlh/Experience/" "mlh/Projects/" "mlh/Accomplishments/" "mlh/register/" "mlh/login/")
 EXIT=0
 
@@ -36,13 +42,3 @@ RESPONSE=$(eval $CURL_CMD $POST "${URL}mlh/login")
 check_route
 
 exit $EXIT
-
-# # use this when flask is already running
-# printf "IMPORTANT: as written right now, this will nuke existing SQL database in the process of testing it. change this before it goes into production.\n\n"
-
-# url=$1
-
-# printf "\n ~~ creating flask db ~~ \n"
-# flask init-db
-# printf "\n ~~ curling login POST (should be error, no users yet) ~~ \n"
-# curl -X POST -d "username=JonSmith&password=pw123" "${url}/mlh/login"
