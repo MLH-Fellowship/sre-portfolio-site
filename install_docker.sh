@@ -6,8 +6,14 @@ echo "If these sound like things you want to do, run this script with sudo.  Rea
 echo "Executing..."
 echo "-----------------"
 
-curl -sSL https://get.docker.com/ | sh
-curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
+if ! command -v docker &> /dev/null
+then
+    curl -sSL https://get.docker.com/ | sh
+fi
+if ! command -v docker-compose & /dev/null
+then
+    curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    chmod +x /usr/local/bin/docker-compose
+fi
 groupadd docker
 usermod -aG docker $USER
