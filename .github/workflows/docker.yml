@@ -33,5 +33,6 @@ jobs:
         run: >-
           sudo ./install_docker.sh &&
           touch .env &&
+          echo "CERTBOT_EMAIL=autumn.chiu.136@gmail.com" > nginx-certbox.env &&
           docker-compose up -d &&
           ./test_endpoints.sh localhost:5000
