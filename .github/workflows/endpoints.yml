@@ -24,9 +24,10 @@ jobs:
         run: >-
           touch .env &&
           echo "URL=localhost:5000" >> .env &&
-          echo "POSTGRES_USER=${{ secrets.POSTGRES_USER }}" >> .env &&
+          echo "POSTGRES_USER=${{ secrets.POSTGRES_USER }}"         >> .env &&
           echo "POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}" >> .env &&
-          echo "POSTGRES_HOST=${{ secrets.POSTGRES_HOST }}" >> .env &&
+          echo "POSTGRES_HOST=${{ secrets.POSTGRES_HOST }}"         >> .env &&
+          echo "POSTGRES_DB=${{ secrets.POSTGRES_DB }}"             >> .env &&
           echo "CERTBOT_EMAIL=autumn.chiu.136@gmail.com" > nginx-certbot.env          
 
       - name: Test site endpoints
