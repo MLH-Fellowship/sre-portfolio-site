@@ -28,18 +28,3 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           tags: my-portfolio:latest
-
-      - name: Test site endpoints
-        run: >-
-          sudo ./install_docker.sh &&
-          touch .env &&
-          echo "URL=localhost:5000" >> .env &&
-          echo "POSTGRES_USER=${{ secrets.POSTGRES_USER }}" >> .env &&
-          echo "POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}" >> .env &&
-          echo "POSTGRES_HOST=${{ secrets.POSTGRES_HOST }}" >> .env &&
-          echo "CERTBOT_EMAIL=autumn.chiu.136@gmail.com" > nginx-certbot.env &&
-          docker-compose up -d --build &&
-          sleep 5 &&
-          curl localhost:5000/mlh/login/ -X POST -d "username=JonSmith&password=pw123" &&
-          docker-compose logs &&
-          ./test_endpoints.sh localhost:5000

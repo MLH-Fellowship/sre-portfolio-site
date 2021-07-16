@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   workflow_run:
-    workflows: ["Docker"]
+    workflows: ["Endpoints"]
     branches: ["master"]
     types: ["completed"]
   workflow_dispatch:
