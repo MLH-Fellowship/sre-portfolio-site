@@ -32,7 +32,14 @@ jobs:
       - name: Test site endpoints
         run: >-
           sudo ./install_docker.sh &&
-          touch .env &&
-          echo "CERTBOT_EMAIL=autumn.chiu.136@gmail.com" > nginx-certbox.env &&
+          cat > .env << EOF
+          URL=${{ secrets.URL }}
+          POSTGRES_USER=${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_HOST=${{ secrets.POSTGRES_HOST }}
+          EOF &&
+          cat > nginx-certbot.env << EOF
+          "CERTBOT_EMAIL=autumn.chiu.136@gmail.com"
+          EOF &&
           docker-compose up -d &&
           ./test_endpoints.sh localhost:5000
