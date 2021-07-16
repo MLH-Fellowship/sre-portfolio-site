@@ -12,6 +12,7 @@ jobs:
   test-docker:
     name: Test docker
     runs-on: ubuntu-latest
+    environment: .env
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
