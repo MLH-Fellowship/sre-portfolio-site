@@ -1,17 +1,32 @@
-# Flask-Blog
+# Production Engineering - Week 1 - Portfolio Site
 
-Minimal Flask template to get started on your blog application for MLH Fellowship Production Engineering track.
+Welcome to the MLH Fellowship! During Week 1, you'll be working with Flask to build a portfolio site. This site will be the foundation of activities we do in future weeks so spend time this week making it your own and reflect your personality!
+
+## Tasks
+
+Once you've got your portfolio downloaded and running using the instructions below, you should attempt to complete the following tasks.
+
+### Portfolio Tasks
+- Add a photo of yourself to the website
+- Add an "About youself" section to the website.
+- Add your previous work experiences
+- Add your hobbies (including images)
+- Add your current/previous education
+- Add a map of all the cool locations/countries you visited
+
+### Flask Tasks
+- Add a template for adding multiple work experiences using [Jinja](https://jinja.palletsprojects.com/en/3.0.x/api/#basics)
+- Add a menu bar
+- Put all your hobbies on a new page.
+- Have new pages get automatically added to the menu bar
 
 ## Getting Started
 
-To make a copy of the Flask website, just use [generate your own here](https://github.com/MLH-Fellowship/flask-blog/generate).
-
-You don't need to submit any pull requests to thie repository. This is just a template to help you get started
+You don't need to submit any pull requests to thie repository. You need to do all your work here.
 
 ## Installation
 
 Make sure you have python3 and pip installed
-
 
 Create and activate virtual environment using virtualenv
 ```bash
@@ -19,7 +34,7 @@ $ python -m venv python3-virtualenv
 $ source python3-virtualenv/bin/activate
 ```
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies!
 
 ```bash
 pip install -r requirements.txt
@@ -27,9 +42,7 @@ pip install -r requirements.txt
 
 ## Usage
 
-
-Create a .env file using the example.env template
-
+Create a .env file using the example.env template (make a copy using the variables inside of the template)
 
 Start flask development server
 ```bash
@@ -38,6 +51,7 @@ $ flask run
 ```
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
