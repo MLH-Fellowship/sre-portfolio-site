@@ -15,6 +15,7 @@ Once you've got your portfolio downloaded and running using the instructions bel
 - Add a map of all the cool locations/countries you visited
 
 ### Flask Tasks
+- Get your Flask app running locally on your machine using the instructions below.
 - Add a template for adding multiple work experiences using [Jinja](https://jinja.palletsprojects.com/en/3.0.x/api/#basics)
 - Add a menu bar
 - Put all your hobbies on a new page.
@@ -49,6 +50,10 @@ Start flask development server
 $ export FLASK_ENV=development
 $ flask run
 ```
+
+You'll now be able to access the website at `localhost:5000` or `127.0.0.1:5000` in the browser! 
+
+*Note: The portfolio site will only work on your local machine while you have it running inside of your terminal. We'll go through how to host it in the cloud in the next few weeks!* 
 
 ## Contributing
 
