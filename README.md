@@ -10,20 +10,25 @@ For each of these tasks, you should create an [Issue](https://docs.github.com/en
 
 *Note: Make sure to include a link to the Issue you're working on inside of your Pull Request so your reviewer knows what you're working on!*
 
+### GitHub Tasks
+- [x] Create Issues for each task below
+- [x] Work on each task in a new branch
+- [x] Open a Pull Request when a task is finished to get feedback
+
 ### Portfolio Tasks
-- Add a photo of yourself to the website
-- Add an "About youself" section to the website.
-- Add your previous work experiences
-- Add your hobbies (including images)
-- Add your current/previous education
-- Add a map of all the cool locations/countries you visited
+- [x] Add a photo of yourself to the website
+- [x] Add an "About youself" section to the website.
+- [x] Add your previous work experiences
+- [x] Add your hobbies (including images)
+- [x] Add your current/previous education
+- [x] Add a map of all the cool locations/countries you visited
 
 ### Flask Tasks
-- Get your Flask app running locally on your machine using the instructions below.
-- Add a template for adding multiple work experiences using [Jinja](https://jinja.palletsprojects.com/en/3.0.x/api/#basics)
-- Add a menu bar
-- Put all your hobbies on a new page.
-- Have new pages get automatically added to the menu bar
+- [x] Get your Flask app running locally on your machine using the instructions below.
+- [x] Add a template for adding multiple work experiences/education/hobbies using [Jinja](https://jinja.palletsprojects.com/en/3.0.x/api/#basics)
+- [x] Create a new page to display hobbies.
+- [x] Add a menu bar that dynamically displays other pages in the app
+
 
 ## Getting Started
 
@@ -53,6 +58,14 @@ Start flask development server
 ```bash
 $ export FLASK_ENV=development
 $ flask run
+```
+
+You should get a response like this in the terminal:
+```
+❯ flask run
+ * Environment: development
+ * Debug mode: on
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 ```
 
 You'll now be able to access the website at `localhost:5000` or `127.0.0.1:5000` in the browser! 
