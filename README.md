@@ -1,6 +1,6 @@
 # Production Engineering - Week 1 - Portfolio Site
 
-Welcome to the MLH Fellowship! During Week 1, you'll be working with Flask to build a portfolio site. This site will be the foundation of activities we do in future weeks so spend time this week making it your own and reflect your personality!
+Welcome to the MLH Fellowship! During Week 1, you'll be working with Flask to build a portfolio site. This site will be the foundation for activities we do in future weeks so spend time this week making it your own and reflect your personality!
 
 ## Tasks
 
