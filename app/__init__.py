@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, request
 from dotenv import load_dotenv
 
 load_dotenv()
