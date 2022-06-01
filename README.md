@@ -32,7 +32,7 @@ For each of these tasks, you should create an [Issue](https://docs.github.com/en
 
 ## Getting Started
 
-You don't need to submit any pull requests to thie repository. You need to do all your work here.
+You need to do all your work here.
 
 ## Installation
 
